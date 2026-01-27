@@ -32,3 +32,13 @@ ul {
 article {
     margin-bottom: 15px;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    max-width: 900px;
+    width: 100%;
+}
