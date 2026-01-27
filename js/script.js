@@ -1,10 +1,14 @@
-const btn = document.getElementById("toggleSkills");
-const skills = document.getElementById("skillsContent");
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("toggleSkills");
+  const skills = document.getElementById("skillsContent");
 
-btn.addEventListener("click", () => {
-    if (skills.style.display === "none") {
-        skills.style.display = "block";
-    } else {
-        skills.style.display = "none";
-    }
+  if (!btn || !skills) {
+    console.error("IDs manquants: toggleSkills ou skillsContent");
+    return;
+  }
+
+  btn.addEventListener("click", () => {
+    const isHidden = getComputedStyle(skills).display === "none";
+    skills.style.display = isHidden ? "block" : "none";
+  });
 });
