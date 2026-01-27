@@ -42,3 +42,17 @@ main {
     max-width: 900px;
     width: 100%;
 }
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+header p:last-child {
+    font-size: 14px;
+    opacity: 0.9;
+}
