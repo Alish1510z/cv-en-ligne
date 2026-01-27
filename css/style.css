@@ -76,3 +76,16 @@ ul {
     }
 }
 
+button {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #2a5298;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
