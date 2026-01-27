@@ -56,3 +56,23 @@ header p:last-child {
     font-size: 14px;
     opacity: 0.9;
 }
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    section {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+}
+
