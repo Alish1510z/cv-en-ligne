@@ -125,3 +125,49 @@ section.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
+.card, section, header {
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before, section::before, header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+    transform: skewX(-20deg);
+    transition: 0.6s;
+}
+
+.card:hover::before,
+section:hover::before,
+header:hover::before {
+    left: 130%;
+}
+
+.title-animate {
+    animation: slideFade 1.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideFade {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
