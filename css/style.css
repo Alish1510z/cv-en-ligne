@@ -139,21 +139,109 @@ section.visible {
     transform: translateY(0);
 }
 
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    border-radius: 25px;
+    
+    color: white;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    gap: 40px;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.subtitle {
+    opacity: 0.9;
+    margin: 10px 0 20px;
+}
+
+.profile-pic {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid white;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.side-links {
+    position: fixed;
+    top: 40%;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.side-links a {
+    background: linear-gradient(135deg, #4e73df, #224abe);
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.side-links a:hover {
+    transform: scale(1.1);
+}
+
+section h2 {
+    position: relative;
+    z-index: 2;
+}
+
+section h2::before {
+    content: attr(data-title);
+    position: absolute;
+    font-size: 80px;
+    color: rgba(0,0,0,0.05);
+    top: -30px;
+    left: -10px;
+    z-index: 1;
+}
+
+/* Active effet lumière premium */
+section {
+
 .card, section, header {
     position: relative;
     overflow: hidden;
 }
+
+section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
 
 .card::before, section::before, header::before {
     content: "";
     position: absolute;
     top: 0;
     left: -75%;
+
     width: 50%;
     height: 100%;
     background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
     transform: skewX(-20deg);
     transition: 0.6s;
+    pointer-events: none;
+}
+
+section:hover::after {
+    left: 130%;
+}
+
 }
 
 .card:hover::before,
