@@ -12,3 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
     skills.style.display = isHidden ? "block" : "none";
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("themeToggle");
+
+  btn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+});
