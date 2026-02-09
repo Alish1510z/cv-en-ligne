@@ -1,159 +1,182 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>CV - Alexandre Fernandes</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <!-- Encodage UTF-8 pour gérer correctement les caractères spéciaux -->
+    <meta charset="UTF-8">
+
+    <!-- Titre de la page affiché dans l’onglet du navigateur -->
+    <title>CV - Alexandre Fernandes</title>
+
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Police Google Fonts utilisée pour le design -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
 <body>
+
 <main>
-    
-<button id="themeToggle" class="theme-btn">🌙</button>
+    <!-- Bouton permettant d’activer / désactiver le mode sombre -->
+    <button id="themeToggle" class="theme-btn">🌙</button>
 
-<header class="hero">
-  <div class="hero-left">
-<header>
-    <h1 class="title-animate">Alexandre Fernandes</h1>
-    <p>Étudiant en informatique de gestion</p>
-    <p>
-        📍 Moudon, Suisse | 
-        📧 alexandre.fernandes1@eduvaud.ch | 
-        📞 +41 76 706 09 06
-    </p>
-  </div>
+    <!-- ===== SECTION HERO / EN-TÊTE DU CV ===== -->
+    <header class="hero">
+        <!-- Partie gauche : informations principales -->
+        <div class="hero-left">
+            <h1 class="title-animate">Alexandre Fernandes</h1>
+            <p>Étudiant en informatique de gestion</p>
+            <p>
+                📍 Moudon, Suisse |
+                📧 alexandre.fernandes1@eduvaud.ch |
+                📞 +41 76 706 09 06
+            </p>
+        </div>
 
-  <div class="hero-right">
-    <img src="assets/images/jul.jpg" alt="Photo Alexandre" class="profile-pic">
-  </div>
-</header>
+        <!-- Partie droite : photo de profil -->
+        <div class="hero-right">
+            <img src="assets/images/jul.jpg" alt="Photo Alexandre" class="profile-pic">
+        </div>
+    </header>
 
+    <!-- ===== SECTION PROFIL ===== -->
+    <section id="profil">
+        <h2 data-title="Profil">Profil</h2>
+        <p>
+            Étudiant en informatique de gestion passionné par le développement web et les technologies numériques.
+            Intéressé par la création de solutions digitales, l'automatisation et l’optimisation des systèmes.
+            À la recherche d'opportunités pour développer mes compétences techniques et professionnelles.
+        </p>
+    </section>
 
-<section id="profil">
-    <h2 data-title="Profil">Profil</h2>
-    <p>
-        Étudiant en informatique de gestion passionné par le développement web et les technologies numériques.
-        Intéressé par la création de solutions digitales, l'automatisation et l’optimisation des systèmes.
-        À la recherche d'opportunités pour développer mes compétences techniques et professionnelles.
-    </p>
-</section>
+    <!-- ===== SECTION EXPÉRIENCES PROFESSIONNELLES ===== -->
+    <section id="experience">
+        <h2 data-title="Expériences">Expériences</h2>
 
-<section id="experience">
-    <h2 data-title="Expériences">Profil</h2>
+        <!-- Expérience : École de recrue -->
+        <article>
+            <h3>Ecole de recrue militaire</h3>
+            <p><em>Janvier 2025 - Mai 2025</em></p>
+            <ul>
+                <li>Service obligatoire</li>
+            </ul>
+        </article>
 
-    <article>
-        <h3>Ecole de recrue militaire</h3>
-        <p><em>Janvier 2025 - Mai 2025</em></p>
+        <!-- Expérience : Stage informatique -->
+        <article>
+            <h3>Stage informatique, Nestlé Research - Lausanne</h3>
+            <p><em>Février 2023 - Janvier 2024</em></p>
+            <ul>
+                <li>Contact avec utilisateurs à l'international (création/gestion projet)</li>
+                <li>Intervention dépannage informatique en lieu sensible</li>
+                <li>Gestion stock et parc informatique</li>
+            </ul>
+        </article>
+
+        <!-- Autres expériences -->
+        <article>
+            <h3>Divers jobs d'étudiants</h3>
+            <p><em>En tout temps</em></p>
+            <ul>
+                <li>Expériences dans le commerce, la livraison et les travaux manuels</li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- ===== SECTION LANGUES ===== -->
+    <section id="langues">
+        <h2 data-title="Langues">Langues</h2>
         <ul>
-            <li>Service obligatoire</li>
+            <li>Français — langue maternelle</li>
+            <li>Portugais — langue maternelle</li>
+            <li>Anglais — niveau B2</li>
         </ul>
-    </article>
+    </section>
 
-    <article>
-        <h3>Stage informatique, Nestlé Research - Lausanne</h3>
-        <p><em>Février 2023 - Janvier 2024</em></p>
+    <!-- ===== SECTION COMPÉTENCES ===== -->
+    <section id="competences">
+        <h2 data-title="Compétences">Compétences</h2>
+
+        <!-- Compétences techniques : langages -->
+        <h3>Langages</h3>
         <ul>
-            <li>Contact avec utilisateurs à l'international (création/gestion projet)</li>
-            <li>Intervention dépannage informatique en lieu sensible</li>
-            <li>Gestion stock et parc informatique</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>PHP</li>
         </ul>
-    </article>
 
-    <article>
-        <h3>Divers jobs d'étudiants</h3>
-        <p><em>En tout temps</em></p>
+        <!-- Outils utilisés -->
+        <h3>Outils</h3>
         <ul>
-            <li>Expériences dans le commerce, la livraison et les travaux manuels.</li>
+            <li>Git & GitHub</li>
+            <li>VS Code</li>
+            <li>MySQL</li>
         </ul>
-    </article>
 
-</section>
+        <!-- Compétences personnelles -->
+        <h3>Autres</h3>
+        <ul>
+            <li>Résolution de problèmes</li>
+            <li>Travail en équipe</li>
+            <li>Autonomie</li>
+        </ul>
+    </section>
 
+    <!-- ===== SECTION FORMATION ===== -->
+    <section id="formation">
+        <h2 data-title="Formations">Formations</h2>
 
-<section id="langues">
-    <h2 data-title="langues">Langues</h2>
-    <ul>
-        <li>Français — langue maternelle</li>
-        <li>Portugais — langue maternelle</li>
-        <li>Anglais — niveau B2</li>
-    </ul>
-</section>
+        <article>
+            <h3>Ecole Portugaise</h3>
+            <p><em>2019-2022</em></p>
+            <p>Certificat d'études C1</p>
+        </article>
 
+        <article>
+            <h3>Ecole obligatoire Moudon</h3>
+            <p><em>2007-2019</em></p>
+            <p>Certificat d'études secondaire</p>
+        </article>
 
-<section id="competences">
-    <h2 data-title="competences">Compétences</h2>
-    <h3>Langages</h3>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>SQL</li>
-        <li>PHP</li>
-    </ul>
+        <article>
+            <h3>ETML Lausanne</h3>
+            <p><em>2020-2024</em></p>
+            <p>CFC Informaticien généraliste</p>
+        </article>
 
-    <h3>Outils</h3>
-    <ul>
-        <li>Git & GitHub</li>
-        <li>VS Code</li>
-        <li>MySQL</li>
-    </ul>
+        <article>
+            <h3>Ecole supérieure Lausanne</h3>
+            <p><em>2025 - aujourd'hui</em></p>
+            <p>Informaticien de gestion</p>
+        </article>
+    </section>
 
-    <h3>Autres</h3>
-    <ul>
-        <li>Résolution de problèmes</li>
-        <li>Travail en équipe</li>
-        <li>Autonomie</li>
-    </ul>
-</section>
-
-
-<section id="formation">
-    <h2 data-title="Formations">Formations</h2>
-
-    <article>
-        <h3>Ecole Portugaise</h3>
-        <p><em>2019-2022</em></p>
-        <p>Certificat d'études C1</p>
-    </article>
-
-    <article>
-        <h3>Ecole obligatoire Moudon</h3>
-        <p><em>2007-2019</em></p>
-        <p>Certificat d'études secondaire</p>
-    </article>
-
-    <article>
-        <h3>ETML Lausanne</h3>
-        <p><em>2020-2024</em></p>
-        <p>CFC Informaticien généraliste</p>
-    </article>
-
-    <article>
-        <h3>Ecole supérieure Lausanne</h3>
-        <p><em>2025-aujourd'hui</em></p>
-        <p>Informaticien de gestion</p>
-    </article>
-
-</section>
-
-<section id="centre_interet">
-    <h2 data-title="Centre d'intérêts">Centre d'intérêts</h2>
-    <ul>
-        <li>Lecture</li>
-        <li>Sport et boxe</li>
-        <li>Marketing / e-commerce</li>
-    </ul>
-</section>
+    <!-- ===== SECTION CENTRES D’INTÉRÊT ===== -->
+    <section id="centre_interet">
+        <h2 data-title="Centres d'intérêts">Centres d'intérêts</h2>
+        <ul>
+            <li>Lecture</li>
+            <li>Sport et boxe</li>
+            <li>Marketing / e-commerce</li>
+        </ul>
+    </section>
 
 </main>
-    <!-- Barre latérale flottante -->
-    <div class="side-links">
-        <a href="mailto:alexandre.fernandes1@eduvaud.ch" target="_blank">📧</a>
-        <a href="https://www.linkedin.com/in/alexandre-fernandes-517b7b296/" target="_blank">💼</a>
-        <a href="https://github.com/Alish1510z" target="_blank">🐙</a>
-    </div>
 
+<!-- ===== BARRE LATÉRALE FLOTTANTE (LIENS EXTERNES) ===== -->
+<div class="side-links">
+    <a href="mailto:alexandre.fernandes1@eduvaud.ch" target="_blank">📧</a>
+    <a href="https://www.linkedin.com/in/alexandre-fernandes-517b7b296/" target="_blank">💼</a>
+    <a href="https://github.com/Alish1510z" target="_blank">🐙</a>
+</div>
+
+<!-- Canvas utilisé pour l’animation de fond (particules / étoiles) -->
 <canvas id="bgCanvas"></canvas>
+
+<!-- Script JavaScript principal -->
 <script src="js/script.js"></script>
+
 </body>
 </html>

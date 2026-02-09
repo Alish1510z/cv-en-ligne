@@ -1,39 +1,63 @@
-/* ================= BASE ================= */
+/* =====================================================
+   BASE GLOBALE
+   Définit l’apparence générale de la page
+   ===================================================== */
 
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, sans-serif;
+
+    /* Fond dégradé animé pour donner une identité visuelle moderne */
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     background-size: 300% 300%;
     animation: bgMove 12s ease infinite;
 }
 
-/* CENTRAGE PROPRE */
+/* =====================================================
+   CONTENEUR PRINCIPAL
+   Centre le contenu du CV à l’écran
+   ===================================================== */
+
 main {
     max-width: 950px;
     margin: 60px auto;
     padding: 0 20px;
 }
 
-/* ================= CARTES ================= */
+/* =====================================================
+   CARTES (HEADER + SECTIONS)
+   Effet "glassmorphism" avec ombre et animation
+   ===================================================== */
 
-header, section {
+header,
+section {
     background: rgba(255,255,255,0.95);
     padding: 30px;
     border-radius: 18px;
+
+    /* Effet de profondeur */
     box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+
     margin-bottom: 30px;
+
+    /* Nécessaire pour les pseudo-éléments (shine effect) */
     position: relative;
     overflow: hidden;
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-header:hover, section:hover {
+/* Légère élévation des cartes au survol */
+header:hover,
+section:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 55px rgba(0,0,0,0.35);
 }
 
-/* ================= SHINE EFFECT ================= */
+/* =====================================================
+   EFFET LUMINEUX AU SURVOL (SHINE EFFECT)
+   Simule un reflet de lumière sur les cartes
+   ===================================================== */
 
 header::before,
 section::before {
@@ -41,26 +65,41 @@ section::before {
     position: absolute;
     top: 0;
     left: -75%;
+
     width: 50%;
     height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+
+    /* Dégradé clair pour simuler une lumière */
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.35),
+        transparent
+    );
+
     transform: skewX(-20deg);
     transition: 0.6s;
 }
 
+/* Animation du reflet lors du survol */
 header:hover::before,
 section:hover::before {
     left: 130%;
 }
 
-/* ================= TITRES ================= */
+/* =====================================================
+   TITRES DES SECTIONS
+   ===================================================== */
 
 h2 {
     border-left: 6px solid #4e73df;
     padding-left: 12px;
 }
 
-/* ================= HERO ================= */
+/* =====================================================
+   HERO (EN-TÊTE PRINCIPAL)
+   Organisation horizontale du nom et de la photo
+   ===================================================== */
 
 .hero {
     display: flex;
@@ -68,22 +107,28 @@ h2 {
     gap: 40px;
 }
 
+/* Photo de profil stylisée */
 .profile-pic {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
+
     border: 4px solid rgba(255,255,255,0.8);
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
     transition: transform 0.3s ease;
 }
 
+/* Effet léger de zoom au survol */
 .profile-pic:hover {
     transform: scale(1.05);
 }
 
-
-/* ================= SCROLL ANIMATION ================= */
+/* =====================================================
+   ANIMATIONS AU SCROLL
+   Les sections apparaissent progressivement
+   ===================================================== */
 
 section {
     opacity: 0;
@@ -96,7 +141,9 @@ section.visible {
     transition: all 0.6s ease;
 }
 
-/* ================= DARK MODE ================= */
+/* =====================================================
+   MODE SOMBRE
+   ===================================================== */
 
 .dark-mode {
     background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #2b2b2b);
@@ -108,7 +155,10 @@ section.visible {
     color: white;
 }
 
-/* ================= SIDE LINKS ================= */
+/* =====================================================
+   BARRE LATÉRALE FLOTTANTE
+   Accès rapide aux liens externes
+   ===================================================== */
 
 .side-links {
     position: fixed;
@@ -126,19 +176,31 @@ section.visible {
     border-radius: 50%;
 }
 
-/* ================= ANIMATIONS ================= */
+/* =====================================================
+   ANIMATIONS CSS
+   ===================================================== */
 
 @keyframes bgMove {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* ================= RESPONSIVE ================= */
+/* =====================================================
+   RESPONSIVE DESIGN
+   Adaptation pour petits écrans
+   ===================================================== */
 
 @media (max-width: 700px) {
-    .hero { flex-direction: column; text-align: center; }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
 }
+
+/* =====================================================
+   CANVAS DE FOND (ANIMATION PARTICULES)
+   ===================================================== */
 
 #bgCanvas {
     position: fixed;
@@ -150,22 +212,30 @@ section.visible {
     pointer-events: none;
 }
 
+/* =====================================================
+   BOUTON MODE SOMBRE
+   ===================================================== */
+
 .theme-btn {
     position: absolute;
     top: 20px;
     right: 20px;
+
     width: 45px;
     height: 45px;
     border-radius: 50%;
     border: none;
+
     background: linear-gradient(135deg, #4e73df, #224abe);
     color: white;
     font-size: 18px;
+
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     transition: transform 0.2s ease;
 }
 
+/* Animation du bouton au survol */
 .theme-btn:hover {
     transform: rotate(15deg) scale(1.1);
 }
